@@ -8,18 +8,20 @@
 [href="http://www.sina.com"]{
     color: red;
 }
-a[href$="baidu.com"]{
+a[href$=".com"]{
     color: #008c8c;
 }
 [class="b"]{
     color: green;
 }
+/* 未访问 */
 a:link{
     color: chocolate;
 }
-/* a:visited{
+/* 访问过后 */
+a:visited{
     color: rgb(113, 133, 0);
-} */
+} 
 /* 选中鼠标悬停时的a元素 */
 a:hover{
     color: red;
@@ -40,7 +42,7 @@ p{
     text-indent: 2em;
     line-height: 2;
 }
-p.red{
+div.red{
     color: red;
 }
 li{
@@ -49,6 +51,9 @@ li{
 .abc>.bcd{
     color: red;
 }
+.abc>p{
+    color: cyan;
+}
 div>ul li{
     color: red;
 }
@@ -56,5 +61,8 @@ div>ul li{
     color: red;
 }
 .special~li,p{
+    color: #008c8c;
+}
+.one p+strong{
     color: #008c8c;
 }
