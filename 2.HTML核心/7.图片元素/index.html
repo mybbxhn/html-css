@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <figure>
+        <a href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%B3%BB/173281?fr=aladdin">
+            <img src="./img/solar.jpg" alt="" usemap="#im_map">
+        </a>
+        <figcaption>
+            <h2>太阳系</h2>
+        </figcaption>
+        <p>
+            太阳系是以太阳为中心，和所有受到太阳的引力约束天体的集合体。包括八大行星（由离太阳从近到远的顺序：水星、金星、地球、火星、木星、土星、天王星、海王星）、以及至少173颗已知的卫星、5颗已经辨认出来的矮行星和数以亿计的太阳系小天体,和哈雷彗星。
+        </p>
+    </figure>
+    <!-- 
+        shape：定义热点形状，可选参数 rect(矩形)、circle(圆形)、poligon(自定义形状)。
+        coords：定义形状路径：
+        当shape=rect时，四个数字依次为：起点X、起点Y、终点X、终点Y
+        当shape=circle时，三个数字依次为：中心点X、中心点Y、半径
+        当shape=poligon时，可定义多个路径点，依次为：起点X、起点Y、路径1X、路径1Y、路径2X、路径2Y......
+        href定义点击跳转的地址。
+    -->
+   
+    <map name="im_map">
+        <area shape="circle" coords="360,204,48" href="https://baike.baidu.com/item/%E6%9C%A8%E6%98%9F/222105?fr=aladdin" target="_blank" alt="木星" title="木星">
+        <area shape="rect" coords="341,287,381,314" href="https://baike.baidu.com/item/%E6%9C%A8%E6%98%9F/222105?fr=aladdin" target="_blank" alt="木星" title="木星">
+        <area shape="poly" coords="649,326,671,339,623,370,639,379" href="https://baike.baidu.com/item/%E5%86%A5%E7%8E%8B%E6%98%9F/137498?fr=aladdin" target="_blank" alt="冥王星" title="冥王星">
+        <area shape="circle" coords="496,198,48" href="https://baike.baidu.com/item/%E5%9C%9F%E6%98%9F/136354?fr=aladdin" target="_blank" alt="土星" title="土星">
+    </map>
+
+</body>
+ 
+</html>
