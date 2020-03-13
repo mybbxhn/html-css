@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 12.URL 带有后面跟有锚名称 #，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。  */
+        :target {
+            border: 2px solid #D4D4D4;
+            background-color: #e5eecc;
+        }
+
+        /* 11.当元素是其父元素中唯一一个特定类型的子元素时，:only-child 匹配该元素。  */
+        li:only-of-type {
+            color: orange;
+        }
+
+        /* 10.当元素是其父元素中唯一一个子元素时，:only-child 匹配该元素。  */
+        ul :only-child {
+            color: orange;
+        }
+
+        /* 9. :nth-last-of-type 与 nth-of-type 相似，不同之处在于它是从最后一个子元素开始计数的。  */
+
+        /* 8. :nth-of-type 与 nth-child 相似，不同之处在于它是只匹配特定类型的元素。  */
+        p:nth-of-type(2) {
+            color: orange;
+        }
+
+        /* 7. :nth-last-child与:nth-child()相似，不同之处于它是最后一个子元素开始计数的。 */
+
+        /* 6.父元素的第 N 个子元素，不论元素的类型。 */
+        ol :nth-child(2) {
+            color: orange;
+        }
+
+        /* 5.父元素的特定类型的最后一个子元素的每个元素。提示：等同于 :nth-last-of-type(1)。 */
+        ul :last-of-type {
+            color: orange;
+        }
+
+        /* 4.父元素的特定类型的首个子元素的每个元素。提示：等同于 :nth-of-type(1)。 */
+        ul :first-of-type {
+            color: orange;
+        }
+
+        /* 3.最后一个子元素 */
+        li:last-child {
+            color: orange;
+        }
+
+        /* 2.第一个子元素 */
+        li:first-child {
+            color: orange;
+        }
+
+        /* 1.一个否定的伪类 */
+        li:not(.first-item) {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 12 -->
+    <h1>这是标题</h1>
+
+    <p><a href="#news1">跳转至内容 1</a></p>
+    <p><a href="#news2">跳转至内容 2</a></p>
+
+    <p>请点击上面的链接，:target 选择器会突出显示当前活动的 HTML 锚。</p>
+
+    <p id="news1"><b>内容 1...</b></p>
+    <p id="news2"><b>内容 2...</b></p>
+    <!-- 11 -->
+    <ul>
+        <li>这里的文本是橙色的</li>
+        <p>这里不是橙色</p>
+    </ul>
+
+    <ul>
+        <li>一些文本</li>
+        <li>一些文本</li>
+    </ul>
+    <!-- 10 -->
+    <ul>
+        <li>这里的文本是橙色的</li>
+    </ul>
+
+    <ul>
+        <li>一些文本</li>
+        <li>一些文本</li>
+    </ul>
+    <!-- 8 -->
+    <article>
+        <h1>我是标题</h1>
+        <p>一些文本</p>
+        <a href=""><img src="images/rwd.png" alt="Mastering RWD"></a>
+        <p>这里的文本是橙色的</p>
+    </article>
+    <!-- 6 -->
+    <ol>
+        <li>Alpha</li>
+        <li>Beta</li>
+        <li>Gamma</li>
+        <li>Delta</li>
+        <li>Epsilon</li>
+        <li>Zeta</li>
+        <li>Eta</li>
+        <li>Theta</li>
+        <li>Iota</li>
+        <li>Kappa</li>
+    </ol>
+    <!-- 5 -->
+    <ul>
+        <li>一些文本<span>一些文本</span> <span>这里的文本是橙色的</span></li>
+        <li>一些文本</li>
+        <li>这里的文本是橙色的</li>
+    </ul>
+    <!-- 4 -->
+    <ul>
+        <li>这里的文本是橙色的</li>
+        <li>一些文本 <span>这里的文本是橙色的</span></li>
+        <li>一些文本</li>
+    </ul>
+    <!-- 3 -->
+    <ul>
+        <li>一些文本</li>
+        <li>一些文本</li>
+        <li>这里的文本是橙色的</li>
+    </ul>
+    <!-- 2 -->
+    <ul>
+        <li>这里的文本是橙色的</li>
+        <li>一些文本</li>
+        <li>一些文本</li>
+    </ul>
+    <!-- 1 -->
+    <ul>
+        <li class="first-item">一些文本</li>
+        <li>这里的文本是橙色的</li>
+        <li>这里的文本是橙色的</li>
+        <li>这里的文本是橙色的</li>
+    </ul>
+</body>
+
+</html>
